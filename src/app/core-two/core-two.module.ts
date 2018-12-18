@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
 import { CoreTwoRoutingModule } from './core-two-routing.module';
 import { CoreTwoComponent } from './core-two.component';

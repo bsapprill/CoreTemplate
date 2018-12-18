@@ -1,0 +1,15 @@
+<h1>Core Practice</h1>
+<h2>Angular 2+</h2>
+<h3>Ben Apprill</h3>
+
+<nav>
+    <a
+        *ngFor = 'let route of (appRoutes$ | async)'
+        [routerLink] = 'route'
+    >
+        {{route}}
+    </a>
+</nav>
+
+<router-outlet></router-outlet>
+
