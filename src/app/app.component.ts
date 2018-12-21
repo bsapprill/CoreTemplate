@@ -7,7 +7,10 @@ import { select } from '@angular-redux/store';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  @select() appRoutes$;
+  
+  appRoutes: string[] = ['CoreOne', 'CoreTwo', 'CoreThree']
+  
+  @select() CoresActivated$
 
   constructor() {
     

@@ -1,31 +1,30 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { NgReduxModule, NgRedux } from "@angular-redux/store";
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 
-import { CoreOneModule } from './core-one/core-one.module';
-import { CoreTwoModule } from './core-two/core-two.module';
-import { CoreThreeModule } from './core-three/core-three.module';
+import { NgReduxModule, NgRedux } from "@angular-redux/store";
+import { ReactiveFormsModule } from "@angular/forms";
+
 
 import { rootReducer, IAppState, INITIAL_STATE } from './app.store';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,    
   ],
   imports: [
     BrowserModule,
+    
+    ReactiveFormsModule,
+    
     AppRoutingModule,
-
+    
     NgReduxModule,
 
-    CoreOneModule,
-    CoreTwoModule,
-    CoreThreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

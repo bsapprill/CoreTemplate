@@ -1,24 +1,22 @@
 
 import { combineReducers } from "redux";
-import { createReducer } from "./app.reducer-utility";
+import { CoresActivated_Reducer } from "./app.reducers";
+
 
 export interface IAppState {
-    appRoutes: string[]
+
+    CoresActivated: boolean[],
 }
 
 export const INITIAL_STATE: IAppState = {
-    appRoutes: ['CoreOne', 'CoreTwo', 'CoreThree']
-}
 
-const appRoutes_Reducer = createReducer([], {
-    VOID_TEST: voidTest
-});
-
-function voidTest() {
-    return INITIAL_STATE.appRoutes;
+    CoresActivated: [false, false, false],
 }
 
 export const rootReducer = combineReducers({
-    appRoutes: appRoutes_Reducer
+    
+    CoresActivated: CoresActivated_Reducer,
+
+    
 })
 
