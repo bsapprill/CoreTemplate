@@ -1,3 +1,30 @@
-<p>
-  core-one works!
-</p>
+
+<form 
+  formGroupName="CoreForm"
+>
+  <label>
+    Name:
+    <input type="text" formControlName="formName">
+  </label>
+
+  <label>
+    Number:
+    <input type="number" formControlName="formNumber">
+  </label>
+
+  <div
+    formGroupName="formData"
+  >
+    <label>
+      Note One:
+      <input type="text" formControlName="noteOne">
+    </label>
+
+    <label>
+      Note Two:
+      <input type="text" formControlName="noteTwo">
+    </label>
+
+  </div>  
+
+</form>

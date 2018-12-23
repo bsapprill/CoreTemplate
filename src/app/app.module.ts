@@ -11,10 +11,9 @@ import { ReactiveFormsModule } from "@angular/forms";
 
 import { rootReducer, IAppState, INITIAL_STATE } from './app.store';
 
-
 @NgModule({
   declarations: [
-    AppComponent,    
+    AppComponent,
   ],
   imports: [
     BrowserModule,

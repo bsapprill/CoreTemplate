@@ -1,4 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
+import { CoreFormsService } from '../core-forms.service';
 
 @Component({
   selector: 'app-core-one',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoreOneComponent implements OnInit {
 
-  constructor() { }
+  CoreForm;
+
+  constructor(
+    private cfs: CoreFormsService
+  ) { }
 
   ngOnInit() {
+    this.CoreForm = this.cfs.newCoreForm;
   }
 
 }
