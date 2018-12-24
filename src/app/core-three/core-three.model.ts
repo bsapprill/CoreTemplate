@@ -1,5 +1,5 @@
-export class CoreOne {
-    
+export class CoreThree {
+
     constructor(
         public name: string,
         public number: number,
