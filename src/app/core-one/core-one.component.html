@@ -1,30 +1,10 @@
 
-<form 
-  formGroupName="CoreForm"
->
-  <label>
-    Name:
-    <input type="text" formControlName="formName">
-  </label>
+<h6>Core One Component</h6>
 
-  <label>
-    Number:
-    <input type="number" formControlName="formNumber">
-  </label>
+Count: {{(CoreOne_State$|async)}}
 
-  <div
-    formGroupName="formData"
-  >
-    <label>
-      Note One:
-      <input type="text" formControlName="noteOne">
-    </label>
+<br>
+<br>
 
-    <label>
-      Note Two:
-      <input type="text" formControlName="noteTwo">
-    </label>
-
-  </div>  
-
-</form>
+<button (click)="DecrementState()">-</button>
+<button (click)="IncrementState()">+</button>

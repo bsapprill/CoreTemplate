@@ -1,10 +1,12 @@
 
 import { createReducer } from "./app.reducer-utility";
 
-export const CoresActivated_Reducer = createReducer([], {
-    TOGGLE_ACTIVATED: ToggleActivated
- });
- 
-     function ToggleActivated(CoresActivated_State, element: number) {
-         return CoresActivated_State[element] = !CoresActivated_State[element];
-     }
+export const Total_State_Sum_Reducer = createReducer(0, {
+
+    CHANGE_TOTAL_STATE: Change_Total_State,
+
+});
+
+    function Change_Total_State(Total_State_Sum, change: number) {
+        return Total_State_Sum += change;
+    }

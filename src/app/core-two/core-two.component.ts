@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgRedux } from '@angular-redux/store';
+import { IAppState } from '../app.store';
 
 @Component({
   selector: 'app-core-two',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoreTwoComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private state: NgRedux<IAppState>
+  ) { }
 
   ngOnInit() {
+  }
+
+  IncrementState() {
+
+  }
+
+  DecrementState() {
+    
   }
 
 }

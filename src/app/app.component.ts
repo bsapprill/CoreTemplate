@@ -10,7 +10,7 @@ export class AppComponent {
   
   appRoutes: string[] = ['CoreOne', 'CoreTwo', 'CoreThree']
   
-  @select() CoresActivated$
+  @select() Total_State_Sum$;
 
   constructor() {
     

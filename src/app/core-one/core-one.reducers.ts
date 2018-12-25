@@ -7,9 +7,9 @@ export const CoreOne_Reducer = createReducer(0, {
 });
 
     function Increment_StateOne(CoreOne_State) {
-        return CoreOne_State.number++;
+        return CoreOne_State++;
     }
 
     function Decrement_StateOne(CoreOne_State) {
-        return CoreOne_State.number--;
+        return CoreOne_State--;
     }
