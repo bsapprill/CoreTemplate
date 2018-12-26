@@ -14,26 +14,26 @@ export class CoreOneComponent implements OnInit {
 
   @select() CoreOne_State$;
 
-  CoreForm;
-
   constructor(
-    private cfs: CoreFormsService,
+    
     private state: NgRedux<IAppState>,
   ) { }
 
   ngOnInit() {
-    this.CoreForm = this.cfs.newCoreForm;
+    
     
   }
 
   IncrementState() {
 
-    this.state.dispatch({type: "INCREMENT_STATEONE"});
+    this.state.dispatch({type: "CHANGE_STATEONE", change: 1});
+    this.state.dispatch({type: "CHANGE_TOTAL_STATE", change: 1});
   }
 
   DecrementState() {
 
-    this.state.dispatch({type: "DECREMENT_STATEONE"});
+    this.state.dispatch({type: "CHANGE_STATEONE", change: -1});
+    this.state.dispatch({type: "CHANGE_TOTAL_STATE", change: -1});
 
   }
 

@@ -1,15 +1,12 @@
 
 import { createReducer } from "../app.reducer-utility";
 
-export const CoreTwo_Reducer = createReducer({}, {
-    INCREMENT_STATETWO: Increment_StateTwo,
-    DECREMENT_STATETWO: Decrement_StateTwo,
+export const CoreTwo_Reducer = createReducer(0, {
+    
+    CHANGE_STATETWO: Change_StateTwo,
+    
 });
 
-    function Increment_StateTwo(CoreTwo_State) {
-        return CoreTwo_State.number++;
-    }
-
-    function Decrement_StateTwo(CoreTwo_State) {
-        return CoreTwo_State.number--;
+    function Change_StateTwo(CoreTwo_State, action) {
+        return CoreTwo_State + action.change;
     }

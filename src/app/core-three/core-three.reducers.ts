@@ -1,16 +1,13 @@
 
 import { createReducer } from "../app.reducer-utility";
 
-export const CoreThree_Reducer = createReducer({}, {
-    INCREMENT_STATETHREE: Increment_StateThree,
-    DECREMENT_STATETHREE: Decrement_StateThree,
+export const CoreThree_Reducer = createReducer(0, {
+    
+    CHANGE_STATETHREE: Change_StateThree,
+    
 });
 
-    function Increment_StateThree(CoreThree_State) {
-        return CoreThree_State.number++;
-    }
-
-    function Decrement_StateThree(CoreThree_State) {
-        return CoreThree_State.number--;
+    function Change_StateThree(CoreThree_State, action) {
+        return CoreThree_State + action.change;
     }
     

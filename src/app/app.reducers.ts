@@ -7,6 +7,6 @@ export const Total_State_Sum_Reducer = createReducer(0, {
 
 });
 
-    function Change_Total_State(Total_State_Sum, change: number) {
-        return Total_State_Sum += change;
+    function Change_Total_State(Total_State_Sum, action) {
+        return Total_State_Sum + action.change;
     }

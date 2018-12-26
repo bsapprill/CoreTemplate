@@ -2,9 +2,6 @@
 import { combineReducers } from "redux";
 
 import { CoreOne_Reducer } from "./core-one/core-one.reducers";
-import { CoreOne } from "./core-one/core-one.model";
-import { CoreTwo } from "./core-two/core-two.model";
-import { CoreThree } from "./core-three/core-three.model";
 import { CoreTwo_Reducer } from "./core-two/core-two.reducers";
 import { CoreThree_Reducer } from "./core-three/core-three.reducers";
 import { Total_State_Sum_Reducer } from "./app.reducers";

@@ -2,14 +2,11 @@
 import { createReducer } from "../app.reducer-utility";
 
 export const CoreOne_Reducer = createReducer(0, {
-    INCREMENT_STATEONE: Increment_StateOne,
-    DECREMENT_STATEONE: Decrement_StateOne,
+    
+    CHANGE_STATEONE: Change_StateOne,
+    
 });
 
-    function Increment_StateOne(CoreOne_State) {
-        return CoreOne_State++;
-    }
-
-    function Decrement_StateOne(CoreOne_State) {
-        return CoreOne_State--;
+    function Change_StateOne(CoreOne_State, action) {
+        return CoreOne_State + action.change;
     }
